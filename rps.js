@@ -20,8 +20,8 @@ function playRound (playerHand) {
     const compScr = document.getElementById("compScr");
     const playerScr = document.getElementById("playerScr");
 
-    document.getElementById("playerSelection").src = `images/${playerSelection}.png`;
-    document.getElementById("computerSelection").src = `images/${computerSelection}.png`;
+    document.getElementById("playerSelection").src = `images/${playerSelection.toLowerCase()}.png`;
+    document.getElementById("computerSelection").src = `images/${computerSelection.toLocaleLowerCase()}.png`;
 
 
     if (playerSelection === computerSelection){
