@@ -16,12 +16,12 @@ let computerScore = 0;
 function playRound (playerHand) {
     const playerSelection = capitalize(playerHand);
     const computerSelection = getComputerChoice();
-    const result = document.getElementById("result")
-    const compScr = document.getElementById("compScr")
-    const playerScr = document.getElementById("playerScr")
+    const result = document.getElementById("result");
+    const compScr = document.getElementById("compScr");
+    const playerScr = document.getElementById("playerScr");
 
-    document.getElementById("playerSelection").src = `/images/${playerSelection}.png`
-    document.getElementById("computerSelection").src = `/images/${computerSelection}.png`
+    document.getElementById("playerSelection").src = `/images/${playerSelection}.png`;
+    document.getElementById("computerSelection").src = `/images/${computerSelection}.png`;
 
 
     if (playerSelection === computerSelection){
