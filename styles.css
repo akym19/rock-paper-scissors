@@ -1,22 +1,26 @@
 body, html {
     height: 100%;
-  }
-  
-  html {
-    background-image: url(/images/background.jpg);
-  
+}
+
+html {
+    /* background-image: url(/images/background.jpg); */
+
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+
     /* Full height */
-    height: 80%;
+    height: 100%;
   
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
 
 body {
     font-family: 'Century Gothic';
-    color: white;
+    color: rgb(70, 68, 68);
 }
 
 header {
@@ -31,15 +35,24 @@ h1 {
     color: transparent; */
     text-align: center;
     width: 100%;
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: -10px;
     margin-top: 0;
     /* background-color: #d8dfb1; */
     /* background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%); */
 }
 
-h3 {
+h4 {
     font-size: 30px;
+    margin: 10px;
+}
+
+#result {
+    height: 50px;
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    padding: 20px;
 }
 
 .container {
@@ -47,6 +60,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 25px;
 }
 
 .cards {
@@ -56,30 +70,55 @@ h3 {
 }
 
 img {
-    height: 120px;
+    height: 80px;
     width: auto;
+    padding: 5px;
 }
 
-.computer, .arena, .player {
-    height: 200px;
+p img {
+    height: 40px;
 }
 
-.computer, .player, .arena {
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p, h2 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+#compScr, #playerScr {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.deck {
+    height: 180px;
     text-align: center;
+    border: solid 1px black;
+    padding: 10px 10%;
+    border-radius: 10px;
+    background-color: rgba(214, 209, 209, 0.3);
+    width: 500px;
 }
 
 .computer .card, .player .card {
-    padding: 5px;
     border: solid 3px black;
     border-radius: 5px;
 }
 
 .player .card {
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .player .card:hover {
-    background-color: antiquewhite;
+    background-color: white;
     scale: 1.1;
     border: solid 3px orange;
 }
@@ -90,4 +129,5 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    color: black;
 }

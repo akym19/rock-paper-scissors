@@ -17,26 +17,10 @@ let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
-function playRound(playerSelection, computerSelection){
+function playRound(){
     hand = prompt("Hand? ");
     playerSelection = capitalize(hand);
     computerSelection = getComputerChoice();
-
-    function win(){
-        let player = playerSelection
-        let computer = computerSelection
-        let message = `You win! ${player} beats ${computer}`;
-        // return message;
-        console.log(message)
-    }
-    
-    function lose(){
-        let player = playerSelection
-        let computer = computerSelection
-        let message = `You lose! ${computer} beats ${player}`;
-        // return message;
-        console.log(message)
-    }
 
     if (playerSelection === computerSelection){
         console.log("It's a tie!");
@@ -45,13 +29,10 @@ function playRound(playerSelection, computerSelection){
         (playerSelection === 'Rock' && computerSelection === 'Scissors')||
         (playerSelection === 'Scissors' && computerSelection === 'Paper')){
             playerScore++
-            return win();
-    } else if (
-        (computerSelection === 'Paper' && playerSelection === 'Rock')||
-        (computerSelection === 'Rock' && playerSelection === 'Scissors')||
-        (computerSelection === 'Scissors' && playerSelection === 'Paper')){
+            console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+    } else {
             computerScore++
-            return lose();
+            console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
     }
 }
 
